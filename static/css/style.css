@@ -1898,6 +1898,7 @@ mark {
 }
 .publication-box p {
   font-size: 16px;
+  /* margin: 5px 0; */
   margin: 5px 0;
 }
 .theme-light .publication-box p {
@@ -1919,6 +1920,9 @@ mark {
 }
 .theme-light .publication-box h6 {
   color: #0b0b13;
+}
+.publication-box span {
+  color: #dc143c;
 }
 .publication-box a {
   color: #0b0b13;
