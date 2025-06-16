@@ -7,8 +7,8 @@
 
 :root {
     /* Main colors */
-    --color-text: #444;
-    --color-light-text: #777;
+    --color-text: #222;
+    --color-light-text: #666;
     --color-white: #f8f8f8;
     
     /* Dark colors */
@@ -34,10 +34,16 @@ body {
     color: var(--color-text);
     /* background-color: #eaeaea; */
     min-height: 100vh;
-    background-image: url('../images/paper.jpg');
+    background-image: url('../images/paper-20.jpg');
     background-repeat: repeat;
     background-position: center center;
-    background-size: auto 1000px;
+    background-size: auto 1500px;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-position: center top;
+    }
 }
 
 .page-about {
@@ -138,13 +144,15 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/paper.jpg');
+    min-height: 100vh;
+    background-image: url('../images/paper-20.jpg');
     background-repeat: repeat;
-    background-size: auto 1000px;
+    background-position: top left;
+    background-size: auto 1500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 9998;
     opacity: 0.5;
     visibility: hidden;
     transition: opacity 0.3s;
@@ -153,6 +161,10 @@ a:hover {
 .loader-wrapper.active {
     opacity: 1;
     visibility: visible;
+}
+
+.page-overlay.loader-active {
+    z-index: 9999;
 }
 
 .loader {
@@ -192,6 +204,7 @@ nav ul {
 
 .navbar.scrolled {
     background-color: var(--color-white);
+    opacity: 0.9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -220,10 +233,11 @@ nav ul {
     height: 100%;  /* Take full height */
     /* max-width: 1200px; */
     margin-left: auto;
-    padding: 0 2rem;
+    padding: 0 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 .nav-links {
@@ -258,9 +272,9 @@ nav ul {
     transform: scale(1.1);  /* Slightly enlarge on hover */
 }
 
-/* Individual icon hover colors */
+/* Individual icon/menu hover colors */
 .navbar .nav-links li:nth-child(1) a:hover i {
-    color: #aaa;
+    color: var(--color-light-text);
 }
 
 .navbar .nav-links li:nth-child(2) a:hover i {
@@ -291,9 +305,6 @@ nav ul {
     padding: 1rem 1.7rem;
     gap: 1.7rem;
     background-color: var(--color-white);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    /* border: 3px solid #eaeaea; */
     border: 5px solid #eaeaea;
     border-radius: 8px;
     box-shadow: 0 0 10px #aaa;
@@ -418,6 +429,151 @@ nav ul {
     .nav-button {
         width: 100%;
         margin: 0 0;
+    }
+}
+
+/* Navigation Menu (Mobile) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-text);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-text {
+    display: none; /* Text is only for mobile menu */
+}
+
+.navbar .nav-links li:nth-child(1) a:hover .nav-text {
+    color: var(--color-light-text);
+}
+
+.navbar .nav-links li:nth-child(2) a:hover .nav-text {
+    color: var(--color-red);
+}
+
+.navbar .nav-links li:nth-child(3) a:hover .nav-text {
+    color: var(--color-green);
+}
+
+.navbar .nav-links li:nth-child(4) a:hover .nav-text {
+    color: var(--color-blue);
+}
+
+.navbar .nav-links li:nth-child(5) a:hover .nav-text {
+    color: var(--color-orange);
+}
+
+.navbar .nav-links li:nth-child(6) a:hover .nav-text {
+    color: var(--color-purple);
+}
+
+.page-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    z-index: -1;
+    transition: opacity 0.3s ease, z-index 0s;
+}
+
+.page-overlay.active {
+    opacity: 1;
+    background-color: #eeeeeeee;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu {
+        visibility: hidden;  /* Changed from display: none */
+        display: none;
+        position: fixed;
+        top: 80px;
+        right: -250px;
+        width: 250px;
+        height: calc(100vh - 60px);
+        z-index: 2;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-menu.active {
+        visibility: visible;  /* Show when active */
+        right: 40px;  /* Slide in from right */
+        display: block;
+    }
+
+    .nav-text {
+        display: inline-block;
+        font-size: 1rem;
+        opacity: 0;
+        /* transform: translateX(-20px); */
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu.active .nav-text {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        transform-origin: right center;
+        width: 100%;
+    }
+
+    .nav-links i {
+        font-size: 1rem;
+    }
+
+    .nav-links a {
+        display: flex;
+        justify-content: flex-end;
+        transform-origin: right center;
+        align-items: center;
+        padding: 1rem;
+        color: var(--color-text);
+        transform: translateX(50px); /* Start off-screen */
+        /* opacity: 0; */
+        gap: 1rem;  /* Space between icon and text */
+        padding: 0;  /* Reduced padding */
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu.active .nav-links a {
+        transform: translateX(0); /* Slide in */
+        opacity: 1;
+    }
+
+    /* Stagger animation for each link */
+    .nav-links a:nth-child(1) { transition-delay: 0.1s; }
+    .nav-links a:nth-child(2) { transition-delay: 0.2s; }
+    .nav-links a:nth-child(3) { transition-delay: 0.3s; }
+    .nav-links a:nth-child(4) { transition-delay: 0.4s; }
+    .nav-links a:nth-child(5) { transition-delay: 0.5s; }
+    .nav-links a:nth-child(6) { transition-delay: 0.6s; }
+
+    .nav-links i {
+        margin-left: 1rem; /* Space between text and icon */
+    }
+
+    .navbar .nav-links li a:hover {
+        transform: scale(1.05);
     }
 }
 

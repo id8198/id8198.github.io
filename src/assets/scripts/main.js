@@ -1,10 +1,40 @@
 // Main JavaScript file for personal website
 
-// Loading page functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle functionality
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const navbar = document.querySelector('.navbar');
+    
+    // Create and append overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'page-overlay';
+    document.body.appendChild(overlay);
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            navMenu.classList.toggle('active');
+            navbar.classList.toggle('menu-open');
+            overlay.classList.toggle('active');
+        });
+
+        // Close menu when clicking overlay
+        overlay.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+            navbar.classList.remove('menu-open');
+            overlay.classList.remove('active');
+        });
+    }
+
+    // Loading page functionality
     // Hide loader when page is loaded
     const loader = document.querySelector('.loader-wrapper');
+    const overlayloader = document.querySelector('.page-overlay');
+    
     loader.classList.remove('active');
+    overlayloader.classList.remove('loader-active');
     
     // Add click handlers to all internal links
     document.querySelectorAll('a').forEach(link => {
@@ -19,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Show loader
                 loader.classList.add('active');
+                overlayloader.classList.add('loader-active');
                 
                 // Navigate after a short delay
                 setTimeout(() => {
