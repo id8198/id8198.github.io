@@ -304,11 +304,14 @@ nav ul {
     display: flex;
     padding: 1rem 1.7rem;
     gap: 1.7rem;
-    background-color: var(--color-white);
-    border: 5px solid #eaeaea;
+    /* background-color: var(--color-white); */
+    /* border: 5px solid #eaeaea; */
+    background-image: url('../images/paper-40.jpg');
+    background-size: auto 250px;
     border-radius: 8px;
-    box-shadow: 0 0 10px #aaa;
-    color: var(--color-text);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
+    /* color: var(--color-text); */
+    color: var(--color-white);
     font-size: 1.25rem;
     font-weight: 600;
     align-items: center;
@@ -317,8 +320,8 @@ nav ul {
     transition: all 0.2s ease;
 }
 
-.nav-button:hover { /* Dummy */
-    background-color: #eaeaea;
+.nav-button:hover {
+    background-color: #eaeaea; /* Dummy */
     transform: translateX(10px);
     text-decoration: none;
 }
@@ -330,38 +333,87 @@ nav ul {
 
 /* Individual button colors - Hover */
 .nav-right a:nth-child(1):hover {
-    color: white;
+    /* color: white;
     background-color: var(--color-red);
-    border-color: var(--color-red-bg);
-    box-shadow: 0 0px 16px 1px var(--color-red);
+    border-color: var(--color-red-bg); */
+    box-shadow: 0 0 16px 1px var(--color-red);
+    color: var(--color-white);
+    background-image: url('../images/paper-11.jpg');
+    background-size: auto 250px;
 }
 
 .nav-right a:nth-child(2):hover {
-    color: white;
+    /* color: white;
     background-color: var(--color-green);
-    border-color: var(--color-green);
-    box-shadow: 0 0px 16px 1px var(--color-green);
+    border-color: var(--color-green); */
+    box-shadow: 0 0 16px 1px var(--color-green);
+    color: var(--color-white);
+    background-image: url('../images/paper-17.jpg');
+    background-size: auto 250px;
 }
 
 .nav-right a:nth-child(3):hover {
-    color: white;
+    /* color: white;
     background-color: var(--color-blue);
-    border-color: var(--color-blue);
-    box-shadow: 0 0px 16px 1px var(--color-blue);
+    border-color: var(--color-blue); */
+    box-shadow: 0 0 16px 1px var(--color-blue);
+    color: var(--color-white);
+    background-image: url('../images/paper-03.jpg');
+    background-size: auto 250px;
 }
 
 .nav-right a:nth-child(4):hover {
-    color: white;
+    /* color: white;
     background-color: var(--color-orange);
-    border-color: var(--color-orange);
-    box-shadow: 0 0px 16px 1px var(--color-orange);
+    border-color: var(--color-orange); */
+    box-shadow: 0 0 16px 1px var(--color-orange);
+    color: var(--color-white);
+    background-image: url('../images/paper-13.jpg');
+    background-size: auto 250px;
 }
 
 .nav-right a:nth-child(5):hover {
-    color: white;
+    /* color: white;
     background-color: var(--color-purple);
-    border-color: var(--color-purple);
-    box-shadow: 0 0px 16px 1px var(--color-purple);
+    border-color: var(--color-purple); */
+    box-shadow: 0 0 16px 1px var(--color-purple);
+    color: var(--color-white);
+    background-image: url('../images/paper-06.jpg');
+    background-size: auto 250px;
+}
+
+/* For Mobile */
+@media (max-width: 768px) {
+    .nav-right a:nth-child(1) {
+        box-shadow: 0 0 10px -1px var(--color-red);
+        color: var(--color-white);
+        background-image: url('../images/paper-11.jpg');
+        background-size: auto 250px;
+    }
+    .nav-right a:nth-child(2) {
+        box-shadow: 0 0 10px -1px var(--color-green);
+        color: var(--color-white);
+        background-image: url('../images/paper-17.jpg');
+        background-size: auto 250px;
+    }
+    .nav-right a:nth-child(3) {
+        box-shadow: 0 0 10px -1px var(--color-blue);
+        color: var(--color-white);
+        background-image: url('../images/paper-03.jpg');
+        background-size: auto 250px;
+    }
+    .nav-right a:nth-child(4) {
+        box-shadow: 0 0 10px -1px var(--color-orange);
+        color: var(--color-white);
+        background-image: url('../images/paper-13.jpg');
+        background-size: auto 250px;
+    }
+    .nav-right a:nth-child(5) {
+        box-shadow: 0 0 10px -1px var(--color-purple);
+        color: var(--color-white);
+        background-image: url('../images/paper-06.jpg');
+        background-size: auto 250px;
+    }
 }
 
 /* Split Layout (for index.html) */
