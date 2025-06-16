@@ -37,7 +37,7 @@ body {
     background-image: url('../images/paper-20.jpg');
     background-repeat: repeat;
     background-position: center center;
-    background-size: auto 1500px;
+    background-size: auto 200px;
 }
 
 @media (max-width: 768px) {
@@ -148,7 +148,7 @@ a:hover {
     background-image: url('../images/paper-20.jpg');
     background-repeat: repeat;
     background-position: top left;
-    background-size: auto 1500px;
+    background-size: auto 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -307,7 +307,7 @@ nav ul {
     /* background-color: var(--color-white); */
     /* border: 5px solid #eaeaea; */
     background-image: url('../images/paper-40.jpg');
-    background-size: auto 250px;
+    background-size: auto 200px;
     border-radius: 8px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
     /* color: var(--color-text); */
@@ -339,7 +339,7 @@ nav ul {
     box-shadow: 0 0 16px 1px var(--color-red);
     color: var(--color-white);
     background-image: url('../images/paper-11.jpg');
-    background-size: auto 250px;
+    background-size: auto 200px;
 }
 
 .nav-right a:nth-child(2):hover {
@@ -349,7 +349,7 @@ nav ul {
     box-shadow: 0 0 16px 1px var(--color-green);
     color: var(--color-white);
     background-image: url('../images/paper-17.jpg');
-    background-size: auto 250px;
+    background-size: auto 200px;
 }
 
 .nav-right a:nth-child(3):hover {
@@ -359,7 +359,7 @@ nav ul {
     box-shadow: 0 0 16px 1px var(--color-blue);
     color: var(--color-white);
     background-image: url('../images/paper-03.jpg');
-    background-size: auto 250px;
+    background-size: auto 200px;
 }
 
 .nav-right a:nth-child(4):hover {
@@ -369,7 +369,7 @@ nav ul {
     box-shadow: 0 0 16px 1px var(--color-orange);
     color: var(--color-white);
     background-image: url('../images/paper-13.jpg');
-    background-size: auto 250px;
+    background-size: auto 200px;
 }
 
 .nav-right a:nth-child(5):hover {
@@ -379,7 +379,7 @@ nav ul {
     box-shadow: 0 0 16px 1px var(--color-purple);
     color: var(--color-white);
     background-image: url('../images/paper-06.jpg');
-    background-size: auto 250px;
+    background-size: auto 200px;
 }
 
 /* For Mobile */
@@ -388,31 +388,31 @@ nav ul {
         box-shadow: 0 0 10px -1px var(--color-red);
         color: var(--color-white);
         background-image: url('../images/paper-11.jpg');
-        background-size: auto 250px;
+        background-size: auto 200px;
     }
     .nav-right a:nth-child(2) {
         box-shadow: 0 0 10px -1px var(--color-green);
         color: var(--color-white);
         background-image: url('../images/paper-17.jpg');
-        background-size: auto 250px;
+        background-size: auto 200px;
     }
     .nav-right a:nth-child(3) {
         box-shadow: 0 0 10px -1px var(--color-blue);
         color: var(--color-white);
         background-image: url('../images/paper-03.jpg');
-        background-size: auto 250px;
+        background-size: auto 200px;
     }
     .nav-right a:nth-child(4) {
         box-shadow: 0 0 10px -1px var(--color-orange);
         color: var(--color-white);
         background-image: url('../images/paper-13.jpg');
-        background-size: auto 250px;
+        background-size: auto 200px;
     }
     .nav-right a:nth-child(5) {
         box-shadow: 0 0 10px -1px var(--color-purple);
         color: var(--color-white);
         background-image: url('../images/paper-06.jpg');
-        background-size: auto 250px;
+        background-size: auto 200px;
     }
 }
 
