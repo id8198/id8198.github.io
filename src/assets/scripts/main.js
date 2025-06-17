@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Loading page functionality
     // Hide loader when page is loaded
     const loader = document.querySelector('.loader-wrapper');
-    const overlayloader = document.querySelector('.page-overlay');
+    // const overlay = document.querySelector('.page-overlay'); // Already created above
     
+    overlay.classList.remove('loader-active');
     loader.classList.remove('active');
-    overlayloader.classList.remove('loader-active');
     
     // Add click handlers to all internal links
     document.querySelectorAll('a').forEach(link => {
@@ -48,8 +48,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 const targetHref = this.href;
                 
                 // Show loader
+                overlay.classList.remove('active');
+                overlay.classList.add('loader-active');
                 loader.classList.add('active');
-                overlayloader.classList.add('loader-active');
                 
                 // Navigate after a short delay
                 setTimeout(() => {
