@@ -872,7 +872,7 @@ nav ul {
 
 /* Education Section */
 .education-item {
-    /* min-width: 500px; */
+    min-width: 500px;
     overflow-x: auto;  /* Enable horizontal scrolling */
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
@@ -1003,7 +1003,7 @@ nav ul {
 } */
 
 .publications-item {
-    /* min-width: 500px; */
+    min-width: 500px;
     overflow-x: auto;  /* Enable horizontal scrolling */
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
