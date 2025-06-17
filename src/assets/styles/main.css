@@ -887,11 +887,11 @@ nav ul {
     gap: 1.5rem;
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .education-item {
         min-width: 300px;
     }
-} */
+}
 
 .education-item::-webkit-scrollbar {
     display: none;
@@ -1018,11 +1018,11 @@ nav ul {
     gap: 1.5rem;
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .publications-item {
-        min-width: 500px;
+        min-width: 300px;
     }
-} */
+}
 
 .publications-item::-webkit-scrollbar {
     display: none;
