@@ -36,31 +36,31 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.classList.remove('loader-active');
     loader.classList.remove('active');
     
-    // Add click handlers to all internal links
-    document.querySelectorAll('a').forEach(link => {
-        // Skip external links and downloads
-        if (link.href.startsWith(window.location.origin) && 
-            !link.hasAttribute('download') &&
-            !link.hasAttribute('target')) {
+    // // Add click handlers to all internal links
+    // document.querySelectorAll('a').forEach(link => {
+    //     // Skip external links and downloads
+    //     if (link.href.startsWith(window.location.origin) && 
+    //         !link.hasAttribute('download') &&
+    //         !link.hasAttribute('target')) {
             
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetHref = this.href;
+    //         link.addEventListener('click', function(e) {
+    //             e.preventDefault();
+    //             const targetHref = this.href;
                 
-                // Show loader
-                navMenu.classList.remove('active');
-                navbar.classList.remove('menu-open');
-                overlay.classList.remove('active');
-                overlay.classList.add('loader-active');
-                loader.classList.add('active');
+    //             // Show loader
+    //             navMenu.classList.remove('active');
+    //             navbar.classList.remove('menu-open');
+    //             overlay.classList.remove('active');
+    //             overlay.classList.add('loader-active');
+    //             loader.classList.add('active');
                 
-                // Navigate after a short delay
-                setTimeout(() => {
-                    window.location.href = targetHref;
-                }, 300);
-            });
-        }
-    });
+    //             // Navigate after a short delay
+    //             setTimeout(() => {
+    //                 window.location.href = targetHref;
+    //             }, 300);
+    //         });
+    //     }
+    // });
 });
 
 // Show loader when navigating away
