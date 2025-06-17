@@ -958,7 +958,7 @@ nav ul {
 }
 
 .education-content h3 {
-    font-size: 1.2rem !important;
+    /* font-size: 1.2rem !important; */
     color: var(--color-text);
 }
 
@@ -1016,6 +1016,10 @@ nav ul {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+
+    font-size: 1.1rem !important;
+    -webkit-text-size-adjust: 100%; /* Prevent iOS font scaling */
+    text-size-adjust: 100%;
 }
 
 @media (max-width: 768px) {
@@ -1080,7 +1084,7 @@ nav ul {
 }
 
 .publications-content h3 {
-    font-size: 1.2rem !important;
+    /* font-size: 1.2rem !important; */
     color: var(--color-text);
 }
 
