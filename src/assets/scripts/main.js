@@ -67,6 +67,16 @@ window.addEventListener('beforeunload', function() {
     loader.classList.add('active');
 });
 
+// Hide loader when navigating back
+window.addEventListener('popstate', function() {
+    const loader = document.querySelector('.loader-wrapper');
+    const overlay = document.querySelector('.page-overlay');
+    
+    // Remove loader and overlay
+    loader.classList.remove('active');
+    overlay.classList.remove('loader-active');
+});
+
 // Scroll-based navbar transparency
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
