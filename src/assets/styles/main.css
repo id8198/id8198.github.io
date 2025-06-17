@@ -216,7 +216,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 103;
+    z-index: 999;
     opacity: 0.5;
     visibility: hidden;
     /* transition: opacity 0.3s; */
@@ -229,7 +229,7 @@ a:hover {
 }
 
 .page-overlay.loader-active {
-    z-index: 104;
+    z-index: 1000;
 }
 
 .loader {
