@@ -958,7 +958,7 @@ nav ul {
 }
 
 .education-content h3 {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
     color: var(--color-text);
 }
 
@@ -981,7 +981,7 @@ nav ul {
 
 .education-year {
     color: var(--color-light-text);
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
     margin: 0;
 }
 
@@ -1080,7 +1080,7 @@ nav ul {
 }
 
 .publications-content h3 {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
     color: var(--color-text);
 }
 
@@ -1098,19 +1098,19 @@ nav ul {
 .publications-authors {
     color: var(--color-text);
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1rem !important;
     margin: 0;
 }
 
 .publications-venue {
     color: var(--color-light-text);
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
     margin: 0;
 }
 
 .publications-note {
     color: var(--color-text);
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
     margin-top: 1rem;
 }
 
