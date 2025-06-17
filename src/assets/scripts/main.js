@@ -28,78 +28,52 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Loading page functionality
-    // Hide loader when page is loaded
-    const loader = document.querySelector('.loader-wrapper');
-    // const overlay = document.querySelector('.page-overlay'); // Already created above
+    // // Loading page functionality
+    // // Hide loader when page is loaded
+    // const loader = document.querySelector('.loader-wrapper');
+    // // const overlay = document.querySelector('.page-overlay'); // Already created above
     
-    overlay.classList.remove('loader-active');
-    loader.classList.remove('active');
-    
-    // // Add click handlers to all internal links
-    // document.querySelectorAll('a').forEach(link => {
-    //     // Skip external links and downloads
-    //     if (link.href.startsWith(window.location.origin) && 
-    //         !link.hasAttribute('download') &&
-    //         !link.hasAttribute('target')) {
-            
-    //         link.addEventListener('click', function(e) {
-    //             e.preventDefault();
-    //             const targetHref = this.href;
-                
-    //             // Show loader
-    //             navMenu.classList.remove('active');
-    //             navbar.classList.remove('menu-open');
-    //             overlay.classList.remove('active');
-    //             overlay.classList.add('loader-active');
-    //             loader.classList.add('active');
-                
-    //             // Navigate after a short delay
-    //             setTimeout(() => {
-    //                 window.location.href = targetHref;
-    //             }, 300);
-    //         });
-    //     }
-    // });
+    // overlay.classList.remove('loader-active');
+    // loader.classList.remove('active');
 });
 
-// Show loader when navigating away
-window.addEventListener('beforeunload', function() {
-    const loader = document.querySelector('.loader-wrapper');
-    loader.classList.add('active');
-});
+// // Show loader when navigating away
+// window.addEventListener('beforeunload', function() {
+//     const loader = document.querySelector('.loader-wrapper');
+//     loader.classList.add('active');
+// });
 
-// Enhanced back/forward navigation handling
-window.addEventListener('pageshow', function(event) {
-    const loader = document.querySelector('.loader-wrapper');
-    const overlay = document.querySelector('.page-overlay');
+// // Enhanced back/forward navigation handling
+// window.addEventListener('pageshow', function(event) {
+//     const loader = document.querySelector('.loader-wrapper');
+//     const overlay = document.querySelector('.page-overlay');
     
-    // Check if page is loaded from cache (back/forward navigation)
-    if (event.persisted) {
-        loader.classList.remove('active');
-        overlay.classList.remove('loader-active');
-    }
-});
+//     // Check if page is loaded from cache (back/forward navigation)
+//     if (event.persisted) {
+//         loader.classList.remove('active');
+//         overlay.classList.remove('loader-active');
+//     }
+// });
 
-window.addEventListener('popstate', function() {
-    const loader = document.querySelector('.loader-wrapper');
-    const overlay = document.querySelector('.page-overlay');
+// window.addEventListener('popstate', function() {
+//     const loader = document.querySelector('.loader-wrapper');
+//     const overlay = document.querySelector('.page-overlay');
     
-    // Remove loader and overlay
-    loader.classList.remove('active');
-    overlay.classList.remove('loader-active');
-});
+//     // Remove loader and overlay
+//     loader.classList.remove('active');
+//     overlay.classList.remove('loader-active');
+// });
 
-// Additional mobile-specific handler
-document.addEventListener('visibilitychange', function() {
-    if (!document.hidden) {
-        const loader = document.querySelector('.loader-wrapper');
-        const overlay = document.querySelector('.page-overlay');
+// // Additional mobile-specific handler
+// document.addEventListener('visibilitychange', function() {
+//     if (!document.hidden) {
+//         const loader = document.querySelector('.loader-wrapper');
+//         const overlay = document.querySelector('.page-overlay');
         
-        loader.classList.remove('active');
-        overlay.classList.remove('loader-active');
-    }
-});
+//         loader.classList.remove('active');
+//         overlay.classList.remove('loader-active');
+//     }
+// });
 
 // Scroll-based navbar transparency
 window.addEventListener('scroll', function() {
