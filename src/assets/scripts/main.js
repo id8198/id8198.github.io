@@ -48,6 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const targetHref = this.href;
                 
                 // Show loader
+                navMenu.classList.remove('active');
+                navbar.classList.remove('menu-open');
                 overlay.classList.remove('active');
                 overlay.classList.add('loader-active');
                 loader.classList.add('active');
