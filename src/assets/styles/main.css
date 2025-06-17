@@ -872,7 +872,7 @@ nav ul {
 
 /* Education Section */
 .education-item {
-    min-width: 500px;
+    /* min-width: 500px; */
     overflow-x: auto;  /* Enable horizontal scrolling */
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
@@ -887,11 +887,11 @@ nav ul {
     gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .education-item {
         min-width: 300px;
     }
-}
+} */
 
 .education-item::-webkit-scrollbar {
     display: none;
@@ -1003,7 +1003,7 @@ nav ul {
 } */
 
 .publications-item {
-    min-width: 500px;
+    /* min-width: 500px; */
     overflow-x: auto;  /* Enable horizontal scrolling */
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
@@ -1018,11 +1018,11 @@ nav ul {
     gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .publications-item {
-        min-width: 300px;
+        min-width: 500px;
     }
-}
+} */
 
 .publications-item::-webkit-scrollbar {
     display: none;
