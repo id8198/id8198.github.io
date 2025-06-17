@@ -67,7 +67,18 @@ window.addEventListener('beforeunload', function() {
     loader.classList.add('active');
 });
 
-// Hide loader when navigating back
+// Enhanced back/forward navigation handling
+window.addEventListener('pageshow', function(event) {
+    const loader = document.querySelector('.loader-wrapper');
+    const overlay = document.querySelector('.page-overlay');
+    
+    // Check if page is loaded from cache (back/forward navigation)
+    if (event.persisted) {
+        loader.classList.remove('active');
+        overlay.classList.remove('loader-active');
+    }
+});
+
 window.addEventListener('popstate', function() {
     const loader = document.querySelector('.loader-wrapper');
     const overlay = document.querySelector('.page-overlay');
@@ -75,6 +86,17 @@ window.addEventListener('popstate', function() {
     // Remove loader and overlay
     loader.classList.remove('active');
     overlay.classList.remove('loader-active');
+});
+
+// Additional mobile-specific handler
+document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) {
+        const loader = document.querySelector('.loader-wrapper');
+        const overlay = document.querySelector('.page-overlay');
+        
+        loader.classList.remove('active');
+        overlay.classList.remove('loader-active');
+    }
 });
 
 // Scroll-based navbar transparency
