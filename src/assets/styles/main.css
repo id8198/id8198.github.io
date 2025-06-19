@@ -28,9 +28,9 @@
 
 body {
     padding-top: 60px;
-    /* font-family: "Huninn", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; */
-    font-family: "Carlito", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
+    /* font-family: "Carlito", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; */
+    font-family: "Carlito", sans-serif;
     color: var(--color-text);
     /* background-color: #eaeaea; */
     min-height: 100vh;
@@ -38,6 +38,10 @@ body {
     background-repeat: repeat;
     background-position: center center;
     background-size: auto 1500px;
+}
+
+:lang(ko) {
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -195,6 +199,10 @@ a {
 .page-research h3,
 .page-research a {
     color: var(--color-orange);
+}
+
+.page-research span {
+    font-size: 1.1rem;
 }
 
 a:hover {
