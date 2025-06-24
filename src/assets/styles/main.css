@@ -42,6 +42,7 @@ body {
 
 :lang(ko) {
     font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 1.0rem;
 }
 
 @media (max-width: 768px) {
