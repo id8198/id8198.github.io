@@ -14,6 +14,8 @@
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
     <link rel="apple-touch-icon" href="../assets/images/logo.png">
     
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
     <title>Jaewook Lee - Research</title>
 </head>
 
@@ -46,7 +48,7 @@
                     <span class="nav-text">Publications</span>
                 </a></li>
                 <li><a href="research.html" title="Research">
-                    <i class="fas fa-flask"></i>
+                    <i class="fas fa-lightbulb"></i>
                     <span class="nav-text">Research</span>
                 </a></li>
                 <li><a href="https://jwlee-dual.com/" title="Blog" target="_blank">
@@ -62,11 +64,67 @@
     
     <main>
         <h1>Research Topics</h1>
+        <p>
+        Many real-world problems can be formulated as an optimization problem of the form,
+        \[ \min_{z \in \mathcal{C}} f(z), \tag{1} \]
+        which consists of an objective function \(f\) to be minimized
+        over a feasible set \(\mathcal{C} \subseteq \mathcal{Z}\) in some parameter space. <br>
+        For example, we can think of classical <i>supervised learning problems</i> of the form:
+        \[ \min_{h \in \mathcal{H}} \mathbb{E}_{(x,y) \sim \mathcal{D}} [\ell(h(x), y)] \tag{2} \]
+        where the objective often represents a loss function
+        \( \ell: \mathcal{X} \times \mathcal{Y} \to \mathbb{R} \)
+        that measures the discrepancy between predicted and actual outcomes, and the goal
+        is to find a hypothesis \(h\) from a hypothesis class \(\mathcal{H}\) that minimizes
+        the expected loss over the data distribution \(\mathcal{D}\).
+        </p>
+
+        <h2 class="section-title">Optimization</h2>
+        <p>
+        <b>Optimization theory</b> is all about designing an algorithm that
+        <u><i>efficiently finds a (near-)optimal solution</i></u>
+        to problems of the form \((1)\), based on
+        (i) <i>the knowledge we have about the objective function and feasible set</i>, and
+        (ii) <i>what kind of access we have to them.</i>
+        For example, we may consider the following cases that cover a wide range of (but not all) scenarios:
+        </p>
+        <ol>
+            <li>If \(f\) is convex (and smooth), what algorithms can efficiently find a <i>global minimum</i>?</li>
+            <li>If \(f\) is nonconvex (and/or nonsmooth), what algorithms can find a <i>local minimum</i> or a <i>stationary point</i>?</li>
+            <li>What do we have access to; exact/noisy gradients, second order information, or something else?</li>
+            <li>What can we do if the space \(\mathcal{Z}\) or constraint \(\mathcal{C}\) is complicated and/or hard to deal with?</li>
+            <li>What if we have a objective different from \((1)\), i.e., something <i>beyond function minimization</i>?</li>
+        </ol>
+        <p>
+        <b>Cases 1 and 2</b> are the most classical settings in optimization theory, where <b>Case 1</b> is famously known as
+        <i>convex optimization</i> (<i>if, of course, \(\mathcal{C}\) is convex</i>).
+        There is a rich and beautiful literature on convex optimization, but active research is still ongoing in many directions,
+        one of which is to create solvers and software that can efficiently handle large-scale convex optimization problems in practice.
+        <b>Case 2</b> also covers a wide range of problems in modern ML/AI applications, especially as many problems under
+        such settings are inherently nonconvex (<i>e.g.,</i> training deep neural networks).
+        For <b>Case 3</b>, the literature of <i>stochastic optimization</i> is quite well-developed when we have access to
+        noisy gradients; some studies think of harder settings of <i>heavy-tailed noise</i> of the gradient oracles, and
+        some consider more realistic models of information retrieval, as in <i>online learning</i> or <i>reinforcement learning</i>.
         
-        <section>
-            <p>Under construction...</p>
-            <!-- <p lang="ko">한국어 폰트는 이걸로 쓰세요.</p> -->
-        </section>
+        Others consider either using more powerful (<i>e.g.,</i> second-order derivatives)
+        or weaker (<i>e.g.,</i> zeroth-order information) oracles and retain good performance.
+        <b>Case 4</b> includes settings such as optimization over discrete structures (<i>e.g.,</i> graphs, sets),
+        problems with special constraints (<i>e.g.,</i> Riemannian manifolds),
+        or even optimization in infinite-dimensional spaces (<i>e.g.,</i> Wasserstein gradient flows).
+        <b>Case 5</b> subsumes <i>minimax</i> or <i>multi-objective</i> optimizations in game theory, problems related to
+        <i>monotone operators</i> (e.g., variational inequalities, monotone inclusion problems), and many more. <br>
+        </p>
+
+        <h2 class="section-title">Statistics</h2>
+        <p>
+            Under construction...
+        <!-- Meanwhile, <b>statistics</b> focuses on understanding the properties of the data
+        and building models that can generalize well to unseen data. (?) -->
+        </p>
+
+        <!-- <p>I am interested in <b>optimization theory</b> and <b>statistics</b>.
+        This includes broad topics of convex/nonconvex/stochastic optimization,
+        statistical learning theory, sampling, and applications to practical 
+        settings, especially in AI/ML.</p> -->
     </main>
     
     <script src="../assets/scripts/main.js"></script>

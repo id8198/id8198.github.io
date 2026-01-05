@@ -77,6 +77,19 @@ p {
     font-size: 1.1rem;
 }
 
+/* Added (list style in <p>) */
+main ul,
+main ol {
+    margin: 0 0 1.5rem 0;
+    padding-left: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+main li {
+    margin-bottom: 0.4rem;
+}
+
 h1 {
     margin: 2rem 0;
     line-height: 1.4;
@@ -567,7 +580,7 @@ nav ul {
     width: 100%;
     height: 100%;
     background-color: #fff;
-    opacity: 0.6;
+    opacity: 0.8;
     transition: all 0.3s ease;
     z-index: -1;
     transition: opacity 0.3s ease, z-index 0.3s ease;
@@ -769,9 +782,9 @@ nav ul {
 }
 
 /* Bigger Google Scholar icon */
-.social-icon:nth-child(1) i {
+/* .social-icon:nth-child(1) i {
     font-size: 1.15rem;
-}
+} */
 
 .social-icon:hover {
     -moz-transform: scale(1.15);
@@ -815,6 +828,10 @@ nav ul {
 }
 .social-icon:hover:nth-child(6) {
     background: var(--color-text);
+    color: var(--color-white);
+}
+
+.social-icon:hover:nth-child(6) i {
     color: var(--color-white);
 }
 
